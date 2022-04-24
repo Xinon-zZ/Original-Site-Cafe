@@ -1,0 +1,361 @@
+@charset "UTF-8";
+/* 共通部分--------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 100%;
+}
+body {
+    font-family: 'Klee One', cursive;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: rgb(84, 69, 54);
+    background-color: #fff/*メイン背景色*/
+}
+a {
+    text-decoration: none;
+    color: rgb(84, 69, 54);
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+/* コンテンツ部分全て */
+.content {
+    visibility: hidden;
+    transition: 0.4s;
+    transition-delay: 0.4s;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+/* 後で手直し */
+.fixed-bg {
+    height: 270px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.sec-title {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 4.5rem;
+    filter: drop-shadow(1px 1px 10px #ffffff);
+    position: absolute;
+    top: 30%;
+    }
+    /* CONTACT メッセージの小タイトル */
+    .messageBox {
+        margin: 40px 0;
+        padding: 50px 0;
+        border-bottom: dashed 3px rgb(84, 69, 54,.5);
+    }
+    .message-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        border-left: double 7px rgb(23, 158, 93);
+    }
+    /* h4の小タイトル */
+    .title {
+        font-size: 1.3rem;
+        text-align: center;
+        border-bottom: 2px solid rgb(126, 126, 126);
+        padding-bottom: 35px;
+    }
+    /* contact,location */
+    .flex-box {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+    
+/*ローディング画面---------------------------- */
+.loader-box {
+    height: 100vh;
+    width: 100%;
+    background-color: #c3b3a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.loader {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.loader span {
+    position: absolute;
+    border: 5px solid rgb(213, 213, 213 ,.4);
+    width: 100%;
+    height: 100%;
+    animation: animate 1s linear infinite;
+    border-radius: 51% 49% 45% 55% / 46% 54% 46% 54%   ;
+}
+.loader span:nth-child(2) {
+    animation-direction: reverse;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.loader h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+.loaded {
+    opacity: 0;
+    transition: all 2s;
+    height: 0;
+}
+/* コンテンツ */
+/* HEADER ---------------------------------------------------------*/
+.page-header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.main-nav {
+    display: flex;
+    font-size: 1.25rem;
+    margin-top: 30px;
+}
+.main-nav li {
+    margin-left: 36px;
+}
+.main-nav a {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+}
+.main-nav a:hover {
+    color: rgb(213, 213, 213);
+    transition: .4s;
+}
+/* ホームコンテント--------------------------------------------------------- */
+.home-content {
+    text-align: right;
+    margin-top: 7%;
+}
+.home-content p {
+    font-size: 1.5rem;
+    margin: 10px 0 50px;
+    color: #fff;
+}
+.home-contentBox {
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    padding-right: 80px;
+    /* padding-left: 20px; */
+}
+.page-title {
+    font-size: 4.5rem;
+    font-weight: normal;
+    color: #fff;
+}
+/* ボタン */
+.btn {
+    background: rgb(23, 158, 93);
+    color: #fff;
+    border-radius: 5px;
+    padding: 18px 32px;
+    margin-right: 10%;
+    cursor: pointer;
+
+}
+.btn a {
+    display: block;
+}
+.btn:hover {
+    background: rgba(73, 220, 149, 0.8);
+    transition: .4s;
+}
+/* メイン画像 */
+#home {
+    background-image: url(./img/capBook.jpg);
+}
+.big-bg {
+    height: 100vh;
+    background-size: cover;
+    background-position: center bottom;
+}
+/* MENU--------------------------------------- */
+#menu {
+    margin-top: 20px;
+    background: linear-gradient(#d3c1af, #ffffff);
+    margin-bottom: 20px;
+}
+#menu .menu-img {
+    background-image: url(./img/cap4.jpg);
+    margin-bottom: 20px;
+    position: relative;
+    }
+/* メニューの写真 */
+.menu-message {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
+    padding-bottom: 50px;
+}
+.item img{
+    border-radius: 40px;
+}
+.item p {
+    font-weight: bold;
+    text-align: center;
+}
+/* メニューのメイン写真 */
+.big-box {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.big-box img {
+    height: 94%;
+    width: 100%;
+    object-fit: cover;
+}
+/* ABOUT------------------------------------------------- */
+#about {
+    background: linear-gradient(#96bfef, #ffffff);
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+.about-img {
+    background-image: url(./img/coffee1.jpg);
+    margin-bottom: 50px;
+    position: relative;
+}
+/* ABOUT コンテンツ */
+.about-message {
+    display: flex;
+    width: 100%;
+}
+/* 左の店内写真 */
+.about-message img {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 52% 48% 66% 34% / 43% 59% 41% 57%;
+}
+/* 右の文章 */
+.text-box {
+    width: 50%;
+    padding: 40px;
+}
+.text-box p {
+    text-align: center;
+    padding-top: 35px;
+}
+/* CONTACT------------------------------------------------ */
+#contact {
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+.contact-img {
+    background-image: url(./img/coffee2.jpg);
+    position: relative;
+}
+/*CONTACT コンテンツ */
+.contact-message {
+    padding-top: 40px;
+}
+/* messageBox-1 地図*/
+.messageBox:first-child {
+    border-top: dashed 3px rgb(84, 69, 54,.5);
+}
+.location-info {
+    width: 22%;
+}
+.location-info p {
+    margin-top: 30px;
+}
+.location-map {
+    width: 74%;
+}
+/* messageBox-2 フォーム */
+form div {
+    margin-bottom: 10px;
+}
+label {
+    font-size: 1.125rem;
+    display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: inherit
+}
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 240px;
+}
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 6rem;
+}
+/* 送信ボタン */
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+/* messageBox-3 sns*/
+.sns {
+    padding: 1.2em 1.5em;
+    background: #d6ebff;
+    box-shadow: 0px 0px 0px 15px #d6ebff;
+    border: dashed 2px white;
+    border-radius: 8px;
+}
+.sns-box {
+    width: 30%;
+}
+.sns-box .title {
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(23, 158, 93);
+    margin-bottom: 30px;
+}
+.messageBox:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+/* FOOTER */
+footer {
+    background-color: #333;
+    padding: 10px;
+}
+footer p {
+    color: #fff;
+    text-align: center;
+}
+/* モバイル版-------------------------------------- */
+@media
+
+
+
+
