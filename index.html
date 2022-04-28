@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Original Site Cafe</title>
-    <link rel="stylesheet" href="https://unpkg.com/ress.dist.ress.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,21 +23,23 @@
 
     <div class="content">
         <section id="home" class="big-bg">
-            <header class="page-header wrapper">
-                <nav>
-                    <ul class="main-nav">
-                        <li><a href="#menu">MENU</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </header>
-    
-            <div class="home-content wrapper">
-                <div class="home-contentBox">
-                    <h2 class="page-title">Original Site Cafe</h2>
-                    <p>ホッとひと息。心あたたまるカフェで癒されてみませんか？</p>
-                    <a href="#menu" class="btn">メニューを見る</a>
+            <div class="wrapper">
+                <header class="page-header wrapper">
+                    <nav>
+                        <ul class="main-nav">
+                            <li><a href="#menu">MENU</a></li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </header>
+        
+                <div class="home-content wrapper">
+                    <div class="home-contentBox">
+                        <h1 class="page-title">Original Site Cafe</h1>
+                        <p>ホッとひと息。心あたたまるカフェで癒されてみませんか？</p>
+                        <a href="#menu" class="btn">メニューを見る</a>
+                    </div>
                 </div>
             </div>
         </section><!--HOME-->
@@ -65,7 +67,7 @@
                         <p>モカ</p>
                     </div>
                     <div class="item">
-                        <img src="./img/cap2.jpg" alt="写真5">
+                        <img src="./img/cap3.jpg" alt="写真5">
                         <p>ブラックコーヒー</p>
                     </div>
                     <div class="item">
@@ -130,7 +132,7 @@
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d747.409120366024!2d139.73679277448346!3d35.6660690272616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b835942e165%3A0xb4897f1f4264c771!2z44CSMTA2LTAwMzIg5p2x5Lqs6YO95riv5Yy65YWt5pys5pyo77yS5LiB55uu77yU4oiS77yV!5e0!3m2!1sja!2sjp!4v1650617829557!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div><!--location-map-->
                         </div>
-                    </div><!--1-->
+                    </div><!--messageBox-->
 
                     <div class="messageBox">
                         <h3 class="message-title">Contact Us</h3>
@@ -148,9 +150,9 @@
                                 <textarea name="your-message" id="message" ></textarea>
                             </div>
                             <!--送信ボタン-->
-                            <input type="submit" class="btn" value="送　信">
+                            <input type="submit" class="btn" value="送  信">
                         </form>
-                    </div><!--2-->
+                    </div><!--messageBox-->
 
                     <div class="messageBox wrapper">
                         <h3 class="message-title">SNS</h3>
@@ -168,7 +170,7 @@
                                 <iframe width="270" height="315" src="https://www.youtube.com/embed/02azSAMtZWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div><!--flex-box-->
-                    </div><!--3-->
+                    </div><!--messageBox-->
                 </div><!--contact-message wrapper-->
             </section><!--CONTACT-->
         </main>
@@ -191,7 +193,7 @@
                 //contentを見せる
                 const content = document.querySelector(".content");
                 content.style.visibility = "visible"
-            }, 0); //最後に直す　1300
+            }, 1300); //最後に直す　1300
         };
     </script>
 </body>

@@ -1,10 +1,5 @@
 @charset "UTF-8";
 /* 共通部分--------------------------------------------- */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 html {
     font-size: 100%;
 }
@@ -51,33 +46,32 @@ li {
     filter: drop-shadow(1px 1px 10px #ffffff);
     position: absolute;
     top: 30%;
-    }
+}
     /* CONTACT メッセージの小タイトル */
     .messageBox {
         margin: 40px 0;
         padding: 50px 0;
         border-bottom: dashed 3px rgb(84, 69, 54,.5);
-    }
+}
     .message-title {
         font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 30px;
         padding-left: 20px;
         border-left: double 7px rgb(23, 158, 93);
-    }
+}
     /* h4の小タイトル */
     .title {
         font-size: 1.3rem;
         text-align: center;
         border-bottom: 2px solid rgb(126, 126, 126);
         padding-bottom: 35px;
-    }
+}
     /* contact,location */
     .flex-box {
         display: flex;
         justify-content: space-between;
-        /* align-items: center; */
-    }
+}
     
 /*ローディング画面---------------------------- */
 .loader-box {
@@ -207,7 +201,7 @@ li {
     background-image: url(./img/cap4.jpg);
     margin-bottom: 20px;
     position: relative;
-    }
+}
 /* メニューの写真 */
 .menu-message {
     display: grid;
