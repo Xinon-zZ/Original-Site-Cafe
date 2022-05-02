@@ -155,10 +155,10 @@ li {
     color: #fff;
 }
 .home-contentBox {
-    margin: 0 calc(50% - 50vw);
-    width: 100vw;
+    position: absolute;
+    top: 30%;
+    right: 40px;
     padding-right: 80px;
-    /* padding-left: 20px; */
 }
 .page-title {
     font-size: 4.5rem;
@@ -185,6 +185,7 @@ li {
 /* メイン画像 */
 #home {
     background-image: url(./img/capBook.jpg);
+    position: relative;
 }
 .big-bg {
     height: 100vh;
@@ -332,7 +333,7 @@ input[type="submit"] {
 .sns-box .title {
     padding-bottom: 20px;
     border-bottom: 2px solid rgb(23, 158, 93);
-    margin-bottom: 30px;
+    margin: 30px;
 }
 .messageBox:last-child {
     margin-bottom: 0;
@@ -348,7 +349,83 @@ footer p {
     text-align: center;
 }
 /* モバイル版-------------------------------------- */
-@media
+@media (max-width: 600px) {
+    /* HOME---------------------------------------------------------- */
+    .home-contentBox {
+        position: static;
+        padding-right: 0;
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-content {
+        text-align: center;
+        margin-top: 20%;
+    }
+    .page-title {
+        font-size: 2.5rem;
+    }
+    .home-content p {
+        font-size: 1.125rem;
+    }
+    .home-content .btn {
+        margin-right: 0;
+    }
+    /* MENU ---------------------------------------------------------*/
+    .big-box {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .big-box img {
+        height: auto;
+    }
+    /* ABOUT----------------------------------------------------------- */
+    .about-message {
+        flex-direction: column;
+    }
+    .about-message img {
+        border-radius: 50%;
+    }
+    .about-message img,
+    .text-box {
+        width: 100%;
+    }
+    /* CONTACT-------------------------------------------------- */
+    .flex-box {
+        flex-direction: column;
+    }
+    .messageBox:nth-child(2),
+    .messageBox:last-child {
+        padding-top: 0;
+    }
+    /* LOCATION */
+    .location-info .title {
+        text-align: left;
+        padding-bottom: 20px;
+    }
+    .location-info,
+    .location-map {
+        width: 100%;
+    }
+    .location-info p {
+        margin-bottom: 20px;
+    }
+    /* CONTACT */
+    form div {
+        margin-bottom: 20px;
+    }
+    input[type="text"], input[type="email"] {
+        max-width: none;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+    /* SNS */
+    .sns-box {
+        width: 100%;
+    }
+}
 
 
 
